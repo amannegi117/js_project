@@ -1,0 +1,116 @@
+*{
+    box-sizing: border-box;
+}
+
+h1{
+    font-family: 'Potta One', cursive;
+}
+body{
+    background-image: url("https://www.teahub.io/photos/full/13-138971_ultra-hd-wallpaper-flower-4k-beautiful-places.jpg");
+    background-repeat: no-repeat;
+    background-size: 230vh 100vh;
+    color: #6dc7e2;
+    overflow: hidden;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin: 0 ;
+
+
+}
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height:300px;
+    width:300px;
+    margin:auto;
+    position: relative;
+    top: 150px;
+    transform: scale(1);
+}
+
+.gradient{
+    background:conic-gradient(
+        rgb(116, 182, 199) 5%,
+        rgb(22, 163, 219) 30%,
+        rgb(19, 238, 165) 50%,
+        rgb(106, 226, 152) 60%,
+        rgb(133, 206, 228) 90%,
+        rgb(130, 201, 209) 20%
+
+    );
+    height:320px;
+    width:320px;
+    border-radius: 50%;
+    position:absolute ;
+    top:-10px;
+    left: -10px;
+    z-index:-2;
+}
+#text{
+    font-family: 'Potta One', cursive;
+    color: rgb(86, 133, 219);
+}
+.circle{
+    
+    background-color: rgb(210, 220, 223);
+    height: 90%;
+    width: 90%;
+    position: absolute;
+    top: 15px;;
+    left: 15px;
+    z-index: -1;
+    border-radius: 50%;
+}
+
+.pointer-container{
+    height: 190px;
+    width: 20px;
+    position: absolute;
+    top: -40px;
+    left: 140px;
+    animation: rotate 7.5s infinite linear;
+    transform-origin: bottom center;
+}
+
+.pointer{
+    background-color:rgb(198, 210, 233);
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    display: block;
+     
+}
+.container.grow{
+    animation: grow 3s linear forwards;
+}
+.container.shrink{
+    animation: shrink 3s  linear forwards;
+}
+@keyframes grow{
+    from{
+        transform: scale(1);
+    }
+    to{
+        transform: scale(1.2);
+    }
+}
+
+@keyframes shrink{
+    from{
+        transform: scale(1.2);
+    }
+    to{
+        transform: scale(1);
+    }
+}
+
+@keyframes rotate{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
